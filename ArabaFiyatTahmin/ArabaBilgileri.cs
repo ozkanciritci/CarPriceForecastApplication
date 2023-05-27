@@ -40,7 +40,7 @@ namespace ArabaFiyatTahmin
         {
 
             arabaYas = 33 - (aracyilicomboBox.SelectedIndex);
-            arabaYiliCarpani = (1 - (arabaYas * 0.03)); // 0.03
+            arabaYiliCarpani = (1 - (arabaYas * 0.03)); 
 
         }
 
@@ -52,7 +52,7 @@ namespace ArabaFiyatTahmin
             {
                 baglan.Open();
 
-                //SqlCommand sqlKomut = new SqlCommand("Select* FROM ArabaBilgisi where ArabaMarkaId='1'", baglan);
+                
                 string query = "SELECT * FROM ArabaBilgisi WHERE ArabaMarkaId = @markaId";
                 SqlCommand sqlKomut = new SqlCommand(query, baglan);
 
